@@ -1,0 +1,16 @@
+<h1>過去の記録</h1>
+<%= @date %>日のダイビング
+<br>
+ポイント：<%= @place %>
+<br>
+ダイブタイム：<%= @time %>
+<br>
+最大深度：<%= @maxdepth %>
+<br>
+平均深度：<%= @avedepth %>
+
+<form action="/logs" method="post">  
+  <button type="submit" value="<%= @name %>" name="name">
+  新しいログ
+  </button>
+</form>

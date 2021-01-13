@@ -1,0 +1,55 @@
+<h1>予約フォーム</h1>
+<h3><%= @causion %></h3>
+<form action="/done" method="post">
+  <div>
+    <label for="name">名前: </label>
+    <input type="text" name="name" value="<%= @name %>">
+  </div>
+  <div>
+    <label for="email">メールアドレス: </label>
+    <input type="email" name="email" value="<%= @email %>">
+  </div>
+  <div>
+    <label for="password">パスワード: </label>
+    <input type="password" name="password" value="<%= @password %>">
+  </div>
+  <div>
+    <label for="date">日付: </label>
+    <input type="date" name="date">
+  </div>
+  <div>ポイント:
+    <select name="place">
+     <option value="砂辺">砂辺</option>
+     <option value="真栄田岬">真栄田岬</option>
+    </select name="place"> 
+  </div>
+  <div>性別: <%= @gender %> 
+    <select name="gender" value="<%= @gender %>">
+     <option value="男">男</option>
+     <option value="女">女</option>
+     <option value="どちらでもない">どちらでもない</option>
+    </select name="gender"> 
+  </div>
+  <div>
+    <label for="height">身長:  </label>
+    <input type="number" name="height" value="<%= @height %>">
+  </div>
+  <div>
+    <label for="weight">体重:  </label>
+    <input type="number" name="weight" value="<%= @weight %>">
+  </div>
+  <div>ライセンス: 
+    <select name="licence"  value="<%= @licence %>">
+    <option value="オープン・ウォーター・ダイバー">オープン・ウォーター・ダイバー</option>
+    <option value="アドヴァンスド・オープン・ウォーター・ダイバー">アドヴァンスド・オープン・ウォーター・ダイバー</option>
+    <option value="インストラクター">インストラクター</option>
+    </select>
+  </div>
+  <div>
+    <label for="log">ログ本数:  </label>
+    <input type="number" name="log" value="<%= @log %>">
+  </div>
+<%= @fail_reservation %>
+<br>
+<input type="submit" value="予約">
+</form>

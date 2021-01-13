@@ -1,0 +1,16 @@
+<h1><%= @name %>さんのページ</h1>
+
+<form action="/pastlog" method="post">  
+  <button type="submit" value="<%= @name %>" name="name">
+  過去のログ
+  </button>
+</form>
+
+<form action="/reservation" method="post">  
+  <button type="submit" value="<%= @name %>" name="name">
+  予約
+  </button>
+</form>
+
+
+ <%# href="http://localhost:4567/reservation" %>

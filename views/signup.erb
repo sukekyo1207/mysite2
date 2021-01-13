@@ -1,0 +1,44 @@
+<h1>サインアップ</h1>
+<form action="/signup" method="post">  
+  <div>
+    <label for="name">名前: </label>
+    <input type="text" name="name">
+  </div>
+  <div>
+    <label for="email">メールアドレス: </label>
+    <input type="email" name="email">
+  </div>
+  <div>
+    <label for="password">パスワード: </label>
+    <input type="password" name="password">
+  </div>
+  <div>性別: 
+    <select name="gender">
+     <option value="男">男</option>
+     <option value="女">女</option>
+     <option value="どちらでもない">どちらでもない</option>
+    </select name="gender"> 
+  </div>
+  <div>
+    <label for="height">身長: </label>
+    <input type="number" name="height">
+  </div>
+  <div>
+    <label for="weight">体重: </label>
+    <input type="number" name="weight">
+  </div>
+  <div>ライセンス: 
+    <select name="licence">
+    <option value="オープン・ウォーター・ダイバー">オープン・ウォーター・ダイバー</option>
+    <option value="アドヴァンスド・オープン・ウォーター・ダイバー">アドヴァンスド・オープン・ウォーター・ダイバー</option>
+    <option value="インストラクター">インストラクター</option>
+    </select>
+  </div>
+  <div>
+    <label for="log">ログ本数: </label>
+    <input type="number" name="log">
+  </div>
+  <%= @fail_signup %>
+  <br>
+<input type="submit" value="signup">
+</form>

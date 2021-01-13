@@ -10426,7 +10426,7 @@ header.masthead h1 {
 .fadein3{
   opacity:0;
   transform:translate(0, 100px);
-  transition:all 2500ms;
+  transition:all 1000ms;
 }
 .fadein3.scrollin{
   opacity:1;

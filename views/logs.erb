@@ -1,0 +1,35 @@
+<h1><%= @name %>さんのダイブログ</h1>
+<form action="/newlogs" method="post">
+  <div>
+    <label for="name">名前: </label>
+    <input type="text" value="<%= @name %>" name="name">
+  </div>
+  <div>
+    <label for="date">日付: </label>
+    <input type="date" name="date">
+  </div>
+  <div>ポイント:
+    <select name="place">
+     <option value="砂辺">砂辺</option>
+     <option value="真栄田岬">真栄田岬</option>
+    </select name="place"> 
+  </div>
+  <div>
+    <label for="time">ダイブタイム: </label>
+    <input type="number" name="time">
+  </div>
+  <div>
+    <label for="maxdepth">最高深度: </label>
+    <input type="number" name="maxdepth">
+  </div>
+  <div>
+    <label for="avedepth">平均深度: </label>
+    <input type="number" name="avedepth">
+  </div>
+  <%= @fail_logs %>
+  <br>
+  <button type="submit" value="<%= @name %>" name="name" >
+  記録する
+  </button>
+</form>
+
